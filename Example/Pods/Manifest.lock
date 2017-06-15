@@ -1,0 +1,16 @@
+PODS:
+  - AAShimmerView (0.1.0)
+
+DEPENDENCIES:
+  - AAShimmerView (from `../`)
+
+EXTERNAL SOURCES:
+  AAShimmerView:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  AAShimmerView: a240f9a822f1b5a58ed6c52e0e8346a5e766d46c
+
+PODFILE CHECKSUM: c4bfcaebfb831606028b20de2be830c9d99152e8
+
+COCOAPODS: 1.2.1

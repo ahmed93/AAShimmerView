@@ -1,0 +1,22 @@
+{
+  "name": "AAShimmerView",
+  "version": "0.1.0",
+  "summary": "A short description of AAShimmerView.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/Ahmed Mohamed Magdi/AAShimmerView",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Ahmed Mohamed Magdi": "ahmed.moh.magdi93@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/Ahmed Mohamed Magdi/AAShimmerView.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "AAShimmerView/Classes/**/*"
+}
