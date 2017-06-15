@@ -11,8 +11,8 @@
 		8B8AA3233A3F86454B204B04406C7E68 /* AAShimmerView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 13CAD2CE20713426CAD1E965A4600BA3 /* AAShimmerView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9F510595D577563AD5DD437F98C680D1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		A78C0AF81EF2B0BD005C4AE9 /* ObjectAssociation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78C0AF51EF2B0BD005C4AE9 /* ObjectAssociation.swift */; };
-		A78C0AF91EF2B0BD005C4AE9 /* ShimmeringView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78C0AF61EF2B0BD005C4AE9 /* ShimmeringView.swift */; };
-		A78C0AFA1EF2B0BD005C4AE9 /* UIView+ShimmeringView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78C0AF71EF2B0BD005C4AE9 /* UIView+ShimmeringView.swift */; };
+		A78C0AF91EF2B0BD005C4AE9 /* AAShimmerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78C0AF61EF2B0BD005C4AE9 /* AAShimmerView.swift */; };
+		A78C0AFA1EF2B0BD005C4AE9 /* UIView+AAShimmerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78C0AF71EF2B0BD005C4AE9 /* UIView+AAShimmerView.swift */; };
 		B0A226903DCEBDFFA4CB148A33659BF3 /* AAShimmerView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F49763102D53849B7B8DC9596579F693 /* AAShimmerView-dummy.m */; };
 		C5D32B8E99E1284B855CF93B9B7C84B6 /* Pods-AAShimmerView_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BAA16C8214D3FF7F305CF9AE9D38AD9 /* Pods-AAShimmerView_Tests-dummy.m */; };
 		EB1AC4D87A0C1E9C25FE5D10DD6C7EC5 /* Pods-AAShimmerView_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E5BD5C9E5BAE0E37BF500EEA565D4967 /* Pods-AAShimmerView_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -55,8 +55,8 @@
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A6CC1912061C7F328F630A9BFCC61407 /* Pods-AAShimmerView_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AAShimmerView_Tests-resources.sh"; sourceTree = "<group>"; };
 		A78C0AF51EF2B0BD005C4AE9 /* ObjectAssociation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectAssociation.swift; sourceTree = "<group>"; };
-		A78C0AF61EF2B0BD005C4AE9 /* ShimmeringView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShimmeringView.swift; sourceTree = "<group>"; };
-		A78C0AF71EF2B0BD005C4AE9 /* UIView+ShimmeringView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+ShimmeringView.swift"; sourceTree = "<group>"; };
+		A78C0AF61EF2B0BD005C4AE9 /* AAShimmerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AAShimmerView.swift; sourceTree = "<group>"; };
+		A78C0AF71EF2B0BD005C4AE9 /* UIView+AAShimmerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+AAShimmerView.swift"; sourceTree = "<group>"; };
 		A9F6AA0DBBBAEA3C517BF4C0511B9354 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB44C3004FDE412F220F7FC169EC9F97 /* Pods-AAShimmerView_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AAShimmerView_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		AB47A66D56DD093E1FEE484F437F9E59 /* Pods-AAShimmerView_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AAShimmerView_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
@@ -100,8 +100,8 @@
 			isa = PBXGroup;
 			children = (
 				A78C0AF51EF2B0BD005C4AE9 /* ObjectAssociation.swift */,
-				A78C0AF61EF2B0BD005C4AE9 /* ShimmeringView.swift */,
-				A78C0AF71EF2B0BD005C4AE9 /* UIView+ShimmeringView.swift */,
+				A78C0AF61EF2B0BD005C4AE9 /* AAShimmerView.swift */,
+				A78C0AF71EF2B0BD005C4AE9 /* UIView+AAShimmerView.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -364,9 +364,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A78C0AFA1EF2B0BD005C4AE9 /* UIView+ShimmeringView.swift in Sources */,
+				A78C0AFA1EF2B0BD005C4AE9 /* UIView+AAShimmerView.swift in Sources */,
 				A78C0AF81EF2B0BD005C4AE9 /* ObjectAssociation.swift in Sources */,
-				A78C0AF91EF2B0BD005C4AE9 /* ShimmeringView.swift in Sources */,
+				A78C0AF91EF2B0BD005C4AE9 /* AAShimmerView.swift in Sources */,
 				B0A226903DCEBDFFA4CB148A33659BF3 /* AAShimmerView-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

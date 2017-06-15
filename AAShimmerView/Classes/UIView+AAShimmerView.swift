@@ -1,5 +1,5 @@
 //
-//  UIView+Loading.swift
+//  UIView+AAShimmerView.swift
 //  AAShimmerView
 //
 //  Created by Ahmed Magdi on 6/11/17.
