@@ -1,6 +1,6 @@
 # AAShimmerView
 
-[![CI Status](http://img.shields.io/travis/Ahmed%20Mohamed%20Magdi/AAShimmerView.svg?style=flat)](https://travis-ci.org/Ahmed%20Mohamed%20Magdi/AAShimmerView)
+[![CI Status](http://img.shields.io/travis/ahmed93/AAShimmerView.svg?style=flat)](https://travis-ci.org/ahmed93/AAShimmerView)
 [![Version](https://img.shields.io/cocoapods/v/AAShimmerView.svg?style=flat)](http://cocoapods.org/pods/AAShimmerView)
 [![License](https://img.shields.io/cocoapods/l/AAShimmerView.svg?style=flat)](http://cocoapods.org/pods/AAShimmerView)
 [![Platform](https://img.shields.io/cocoapods/p/AAShimmerView.svg?style=flat)](http://cocoapods.org/pods/AAShimmerView)
