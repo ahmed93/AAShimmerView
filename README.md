@@ -25,7 +25,7 @@ pod "AAShimmerView"
 
 ## Usage
 
-First thing to do is to import FBShimmerView
+First thing to do is to import AAShimmerView
 
 ```swift
 import AAShimmerView
@@ -34,12 +34,12 @@ import AAShimmerView
 Then just do what ever you want
 
 ```swift
-label1.fbShimmerHeight = label1.frame.height/2
-label2.fbShimmerHeight = label2.frame.height/2
-label3.fbShimmerHeight = label3.frame.height/2
-label4.fbShimmerHeight = label4.frame.height/2
+label1.aaShimmerHeight = label1.frame.height/2
+label2.aaShimmerHeight = label2.frame.height/2
+label3.aaShimmerHeight = label3.frame.height/2
+label4.aaShimmerHeight = label4.frame.height/2
 
-containerView.fbShimmerSubViews = [label1, label2, label3, label4, imageView]
+containerView.aaShimmerSubViews = [label1, label2, label3, label4, imageView]
 containerView.startShimmering()
 ```
 

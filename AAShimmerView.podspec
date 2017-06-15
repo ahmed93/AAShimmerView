@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'AAShimmerView'
-  s.version          = '1.0.1'
+  s.version          = '1.0.2'
   s.summary          = 'AAShimmerView aims to bring Facebook loading Views to all apps'
 
 # This description is used to generate tags and improve search results.
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-A quick way to present the user with loading indicator without blocking the user UI. FBShimmerView aims to enhance the User experince when waiting the API requests to finish. FBShimmerView is inspired from Facebook.
+A quick way to present the user with loading indicator without blocking the user UI. AAShimmerView aims to enhance the User experince when waiting the API requests to finish. AAShimmerView is inspired from Facebook.
                        DESC
 
   s.homepage         = 'https://github.com/ahmed93/AAShimmerView'

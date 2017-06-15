@@ -12,7 +12,7 @@
         <!--View Controller-->
         <scene sceneID="zJ5-CB-nAj">
             <objects>
-                <viewController id="e5e-o1-BME" customClass="ViewController" customModule="FBShimmerView_Example" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="e5e-o1-BME" customClass="ViewController" customModule="AAShimmerView_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="IL6-1A-MC6"/>
                         <viewControllerLayoutGuide type="bottom" id="PK3-7m-1Da"/>
@@ -85,8 +85,8 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FBShimmerView" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="79s-mc-Bhu">
-                                <rect key="frame" x="116" y="56" width="144" height="24"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AAShimmerView" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="79s-mc-Bhu">
+                                <rect key="frame" x="115" y="56" width="146.5" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
