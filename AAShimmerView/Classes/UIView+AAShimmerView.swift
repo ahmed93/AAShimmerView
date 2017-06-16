@@ -8,11 +8,19 @@
 
 import UIKit
 
+public enum ShimmerAlignment {
+    case center
+    case top
+    case bottom
+}
+
 public extension UIView {
     private static let association_subViews = ObjectAssociation<[UIView]>()
     private static let association_viewHeight = ObjectAssociation<CGFloat>()
     private static let association_viewAlpha = ObjectAssociation<CGFloat>()
     private static let association_FBShimmerView = ObjectAssociation<AAShimmerView>()
+    private static let association_shimmerColors = ObjectAssociation<[UIColor]>()
+    private static let association_shimmerVerticalAlignment = ObjectAssociation<ShimmerAlignment>()
     
     private var shimmerView: AAShimmerView? {
         get { return UIView.association_FBShimmerView[self] }
@@ -20,7 +28,7 @@ public extension UIView {
     }
     
     var aaShimmerViewAlpha: CGFloat {
-        get { return UIView.association_viewAlpha[self] ?? 1 }
+        get { return UIView.association_viewAlpha[self] ?? self.alpha }
         set { UIView.association_viewAlpha[self] = newValue }
     }
     
@@ -36,6 +44,17 @@ public extension UIView {
     
     public var isShimmering:Bool {
         return shimmerView != nil
+    }
+    
+    public var aashimmerColors:[UIColor]? {
+        get { return UIView.association_shimmerColors[self] }
+        set { UIView.association_shimmerColors[self] = newValue }
+    }
+    
+    /// Vertical Alignment by default is set to center.
+    public var aashimmerVerticalAlignment:ShimmerAlignment {
+        get { return UIView.association_shimmerVerticalAlignment[self] ?? .center }
+        set { UIView.association_shimmerVerticalAlignment[self] = newValue }
     }
     
     public func startShimmering() {

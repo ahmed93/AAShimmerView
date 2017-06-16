@@ -66,7 +66,14 @@ class AAShimmerView: UIView, CAAnimationDelegate {
             }
             
             if view.aaShimmerHeight != view.frame.height {
-                rect.origin.y += view.aaShimmerHeight/2
+                switch view.aashimmerVerticalAlignment {
+                case .bottom:
+                    rect.origin.y += (view.frame.size.height - view.aaShimmerHeight)
+                case .center:
+                    rect.origin.y += view.frame.size.height/2 - view.aaShimmerHeight/2
+                case .top:
+                    rect.origin.y = 0
+                }
             }
             return path.addPath((UIBezierPath(roundedRect: rect, cornerRadius: view.layer.cornerRadius).cgPath))
         }
@@ -82,7 +89,14 @@ class AAShimmerView: UIView, CAAnimationDelegate {
         layer.startPoint = CGPoint(x: 0.0, y: 0.5)
         layer.endPoint = CGPoint(x: 1.0, y: 0.525)
         layer.frame = CGRect(x: 0, y: 0, width: frame.size.width, height: frame.size.height)
-        let colors = [UIColor.lightGray.cgColor , UIColor.white.cgColor]
+        
+        var colors:[Any]!
+        if let colorList = rootView.aashimmerColors, colorList.count > 0 {
+            colors = colorList.map{$0.cgColor}
+        }else {
+            colors = [UIColor.lightGray.cgColor , UIColor.white.cgColor]
+        }
+        
         layer.colors = colors
     }
     
