@@ -5,6 +5,10 @@
 [![License](https://img.shields.io/cocoapods/l/AAShimmerView.svg?style=flat)](http://cocoapods.org/pods/AAShimmerView)
 [![Platform](https://img.shields.io/cocoapods/p/AAShimmerView.svg?style=flat)](http://cocoapods.org/pods/AAShimmerView)
 
+## Demo
+
+<img width="400" height="800" src="https://raw.githubusercontent.com/ahmed93/aashimmerview/master/Demo.gif">
+
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
