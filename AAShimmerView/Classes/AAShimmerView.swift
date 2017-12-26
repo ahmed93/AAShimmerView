@@ -19,7 +19,7 @@ class AAShimmerView: UIView, CAAnimationDelegate {
     
     convenience init(rootView:UIView, colors:[CGColor]?=nil) {
         self.init(frame: CGRect(x: 0, y: 0, width: rootView.frame.width, height: rootView.frame.height))
-        self.translatesAutoresizingMaskIntoConstraints = false
+//        self.translatesAutoresizingMaskIntoConstraints = false
         self.gradientLayer = CAGradientLayer(layer: rootView.layer)
         self.rootView = rootView
         self.tag = 104420
@@ -49,6 +49,7 @@ class AAShimmerView: UIView, CAAnimationDelegate {
     
     /// Is responsable for Creating CAShapeLayer with paths depending on the subViews and mask
     /// the generated CAShapeLayer to the gradientLayer leaving only the paths the was added
+    ///
     private func applyMaskingFromSubViews() {
         let lay = CAShapeLayer()
         let path: CGMutablePath = CGMutablePath()
@@ -104,15 +105,15 @@ class AAShimmerView: UIView, CAAnimationDelegate {
     private func startAnimating() {
         let layer = gradientLayer!
         let fromColors = layer.colors
-        
+
         let toColors = self.shift(list: fromColors)
         layer.colors = toColors
-        
+
         let animation = CABasicAnimation(keyPath: "colors")
         animation.fromValue = fromColors
         animation.toValue = toColors
         animation.duration = 1.5
-        animation.isRemovedOnCompletion = true
+        animation.isRemovedOnCompletion = false
         animation.fillMode = kCAFillModeForwards
         animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
         animation.delegate = self
@@ -131,12 +132,16 @@ class AAShimmerView: UIView, CAAnimationDelegate {
     }
     
     internal func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
-        startAnimating()
+        if flag {
+            startAnimating()
+        }
     }
     
     private func configureConstraints() {
         constraintsList += NSLayoutConstraint.constraints(withVisualFormat: "V:|[view]|", options: [], metrics: nil, views: ["view":self])
         constraintsList += NSLayoutConstraint.constraints(withVisualFormat: "H:|[view]|", options: [], metrics: nil, views: ["view":self])
+        
+
         NSLayoutConstraint.activate(constraints)
     }
     
@@ -146,8 +151,10 @@ class AAShimmerView: UIView, CAAnimationDelegate {
         rootView.aaShimmerSubViews?.forEach{$0.aaShimmerViewAlpha = $0.alpha; $0.alpha = 0}
     }
     
-    func deviceOrientationDidChange(notification:Notification) {
+    @objc public func deviceOrientationDidChange(notification:Notification) {
+        rootView.setNeedsUpdateConstraints()
         applyMaskingFromSubViews()
+        rootView.updateConstraintsIfNeeded()
     }
     
     public func stop() {
