@@ -1,9 +1,9 @@
 {
   "name": "AAShimmerView",
-  "version": "0.1.0",
-  "summary": "A short description of AAShimmerView.",
-  "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/Ahmed Mohamed Magdi/AAShimmerView",
+  "version": "1.1",
+  "summary": "AAShimmerView aims to bring Facebook loading Views to all apps",
+  "description": "A quick way to present the user with loading indicator without blocking the user UI. AAShimmerView aims to enhance the User experince when waiting the API requests to finish. AAShimmerView is inspired from Facebook.",
+  "homepage": "https://github.com/ahmed93/AAShimmerView",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -12,8 +12,8 @@
     "Ahmed Mohamed Magdi": "ahmed.moh.magdi93@gmail.com"
   },
   "source": {
-    "git": "https://github.com/Ahmed Mohamed Magdi/AAShimmerView.git",
-    "tag": "0.1.0"
+    "git": "https://github.com/ahmed93/AAShimmerView.git",
+    "tag": "1.1"
   },
   "platforms": {
     "ios": "8.0"
