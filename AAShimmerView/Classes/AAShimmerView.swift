@@ -151,7 +151,7 @@ class AAShimmerView: UIView, CAAnimationDelegate {
         rootView.aaShimmerSubViews?.forEach{$0.aaShimmerViewAlpha = $0.alpha; $0.alpha = 0}
     }
     
-    @objc public func deviceOrientationDidChange(notification:Notification) {
+    @objc func deviceOrientationDidChange(notification:Notification) {
         rootView.setNeedsUpdateConstraints()
         applyMaskingFromSubViews()
         rootView.updateConstraintsIfNeeded()
